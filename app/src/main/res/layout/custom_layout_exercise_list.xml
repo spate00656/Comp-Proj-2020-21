@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_8sdp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@drawable/rounded_button_design_"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:text="@string/weight_kgs"
+            android:padding="@dimen/_4sdp" />
+
+        <TextView
+            android:id="@+id/exercise_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:textSize="16sp"
+            android:text="10"
+            tools:ignore="RelativeOverlap" />
+
+
+        <TextView
+            android:id="@+id/reps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:padding="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:text="@string/reps" />
+
+
+        <TextView
+            android:id="@+id/reps_tv"
+            android:text="10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_mini"
+            android:padding="@dimen/_4sdp" />
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,156 @@
+<resources>
+    <string name="app_name">WOA</string>
+    <string name="jobs">Jobs</string>
+    <string name="calender">Calender</string>
+    <string name="helpful_links">Helpful links</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_status">Status:</string>
+    <string name="company_name">Company Name</string>
+    <string name="create_job">Create Job</string>
+    <string name="update_job">Update Job</string>
+    <string name="job_title">Job Title</string>
+    <string name="status">Status</string>
+    <string name="date">Date</string>
+    <string name="job_specification">Job Specification</string>
+    <string name="location">Location</string>
+    <string name="save_now">Save Now</string>
+    <string name="job_icon">Job icon</string>
+    <string name="edit_job">Edit Job</string>
+    <string name="delete_job">Delete Job</string>
+    <string name="no_data_found">No data found</string>
+    <string name="_more_info">More info:</string>
+    <string name="video_thumbnail">Video thumbnail</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="_today">Today,</string>
+    <string name="select_date">Select date</string>
+    <string name="_company">Company:</string>
+    <string name="_job_title">Job Title:</string>
+    <string name="app_logo">App Logo</string>
+    <string name="username">Username</string>
+    <string name="submit">Submit</string>
+    <string name="forget_password">Forgot Password?</string>
+    <string name="or_sign_in_with">or sign in with:</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? <font color="#000000"><u>Create</u></font></string>
+    <string name="already_have_account">Already have an account? <font color="#000000"><u>Login</u></font></string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="user_name">User Name</string>
+    <string name="by_signing_up_you_agree_with_our_terms_and_conditions">By signing up you agree with our terms and conditions</string>
+    <string name="create_new_account">Create new account</string>
+    <string name="password_reset_description">We just need your registered email to send you password reset instructions.</string>
+    <string name="lock_image">lock image</string>
+    <string name="send">Send</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="phone_no">Phone No</string>
+    <string name="address">Address</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="product">Product</string>
+    <string name="add">Add</string>
+    <string name="minus_icon">Minus icon</string>
+    <string name="plus_icon">Plus Icon</string>
+    <string name="quantity">Quantity</string>
+    <string name="add_more">Add More</string>
+
+    <string-array name="status_array">
+        <item>Interview 1</item>
+        <item>Interview 2</item>
+        <item>Assessment</item>
+    </string-array>
+
+
+    <string name="name_error">Enter a valid name</string>
+    <string name="email_error">Enter a valid email</string>
+    <string name="phone_error">Enter a valid mobile</string>
+    <string name="address_error">Enter a valid address</string>
+    <string name="password_error">Enter a valid password</string>
+    <string name="password_length_error">Password must be of 8 or more letters</string>
+    <string name="password_match_error">Passwords do not match</string>
+    <string name="history">History</string>
+    <string name="logout">Logout</string>
+    <string name="_1">1</string>
+    <string name="create_order">Create Order</string>
+    <string name="order_now">Order Now</string>
+    <string name="items">Items</string>
+    <string name="sign_in">Sign in</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="please_sign_in_to_continue">Please sign in to continue...</string>
+    <string name="login">LOGIN</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="calendar">Calendar</string>
+    <string name="reports">Reports</string>
+    <string name="workout_plan">Workout Plan</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="update">Update</string>
+    <string name="welcome_to_fitness_app">Welcome to Fitness App</string>
+    <string name="we_provide_a_fitness_services">We provide a fitness services</string>
+    <string name="create_workout_program">Create Workout Program</string>
+    <string name="what_are_you_looking_for">What are you looking for?</string>
+    <string name="exercise_tutorials">Exercise Tutorials</string>
+
+
+    <string name="post">Post</string>
+    <string name="upload_picture">Upload Picture</string>
+    <string name="read_more"><![CDATA[SEE MORE >]]></string>
+    <string name="code">Code</string>
+    <string name="description">Description</string>
+    <string name="exercise">Exercise</string>
+    <string name="reps">Reps</string>
+    <string name="confirm">Confirm</string>
+    <string name="add_exercises">Add Exercises</string>
+    <string name="create_now">Create Now</string>
+    <string name="blog">Blog</string>
+    <string name="no_blogs_posted_yet">No workout plan yet</string>
+    <string name="name">name</string>
+    <string name="workout_name">Workout Name</string>
+    <string name="reminder">Reminder</string>
+    <string name="title">Title</string>
+    <string name="select_time">Select Time</string>
+    <string name="set_your_reminder">Set Your Reminder</string>
+    <string name="workout_report_with_progress">Workout Report with Progress</string>
+    <string name="set_your_workout_remainder">Set your Workout Remainder</string>
+    <string name="check_your_workout_with_calendor">Check your workout with Calendar</string>
+    <string name="shoulders">Shoulders</string>
+    <string name="triceps">Triceps</string>
+    <string name="biceps">Biceps</string>
+    <string name="chest">Chest</string>
+    <string name="legs">Legs</string>
+    <string name="back">Back</string>
+    <string name="abs">Abs</string>
+    <string name="cardio">Cardio</string>
+    <string name="weight_kgs">Weight (Kgs)</string>
+    <string name="exercise_name">Exercise Name</string>
+    <string name="total_exercises">Total Exercises</string>
+    <string name="time">Time</string>
+    <string name="today_workout">Today Workout</string>
+    <string name="hello">Hello</string>
+    <string name="create_account">Create account</string>
+    <string name="create_programme">Create Programme</string>
+    <string name="goals_type">Goals Type</string>
+    <string name="exercise_list">Exercise List</string>
+    <string name="pick_length_of_programme">Pick length \nof Programme</string>
+    <string name="number_of_days_per_week">Number of days per week</string>
+    <string name="exercises">Exercises</string>
+    <string name="goals">Goals ?</string>
+    <string name="build_muscle">Build Muscle</string>
+    <string name="lose_fat">Lose fat</string>
+    <string name="maintenance">Maintenance</string>
+    <string name="creating_programme">Creating Programme.......</string>
+    <string name="save">Save</string>
+    <string name="rm_calculator">RM Calculator</string>
+    <string name="rep_max_calculator">Rep Max Calculator</string>
+    <string name="use_this_calculator_to_figure_out_what_weight_to_use">Use this calculator to figure out what weight to use</string>
+    <string name="video_tutorials">Video Tutorials</string>
+    <string name="learn_how_to_perform_your_favourite_exercises">Learn how to perform your favourite exercises</string>
+    <string name="tutorials">Tutorials</string>
+    <string name="workout_reminders">Workout Reminders</string>
+    <string name="notifications">Notifications</string>
+    <string name="set_notifications_to_remind_you_for_your_workout">Set notifications to remind you for your workout</string>
+    <string name="set_and_track_goals">Set and Track Goals</string>
+
+
+</resources>

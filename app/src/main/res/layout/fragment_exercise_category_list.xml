@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExerciseHistory.ExerciseCategoryListFragment">
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_small"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+
+            <com.skydoves.elasticviews.ElasticImageView
+                android:id="@+id/back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:backgroundTint="@color/black"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/exerciseNames"
+        android:layout_below="@+id/linear1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:fontFamily="@font/poppins"
+        android:text="@string/exercises"
+        android:textColor="@color/colorSecondary"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+
+    <ProgressBar
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/noDataMessage"
+        android:text="NO Exercise yet"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_below="@+id/exerciseNames"
+        android:layout_marginTop="@dimen/margin_normal"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.skydoves.elasticviews.ElasticImageView
+        android:id="@+id/add_button"
+        android:layout_width="40dp"
+        android:visibility="gone"
+        android:layout_height="40dp"
+        android:background="@drawable/oval_shape"
+        android:backgroundTint="@color/colorSecondary"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_alignParentEnd="true"
+        android:padding="10dp"
+        android:src="@drawable/ic_outline_add"
+        android:tint="@color/white" />
+
+</RelativeLayout>

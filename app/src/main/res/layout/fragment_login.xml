@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    tools:context=".auth.fragments.LoginFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_marginTop="100dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:fontFamily="@font/poppins"
+                    android:text="@string/hello"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="55sp" />
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:fontFamily="@font/poppins"
+                    android:text="Sign in to your account"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="16sp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/margin_small"
+                    app:cardElevation="@dimen/margin_mini">
+
+
+
+                </androidx.cardview.widget.CardView>
+                <EditText
+                    android:id="@+id/login_username_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:elevation="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:background="@drawable/custom_edit_text_layout"
+                    android:drawableStart="@drawable/ic_baseline_person_outline_24"
+                    android:drawablePadding="@dimen/margin_large"
+                    android:drawableTint="@color/colorSecondary"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/username"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/margin_large"
+                    android:paddingEnd="@dimen/margin_large"
+                    android:textColor="@color/colorSecondary"
+                    android:textColorHint="@color/colorDivider"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/login_password_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:elevation="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:background="@drawable/custom_edit_text_layout"
+                    android:drawableStart="@drawable/ic_baseline_lock_24"
+                    android:drawablePadding="@dimen/margin_large"
+                    android:drawableTint="@color/colorSecondary"
+                    android:fontFamily="@font/open_sans"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:paddingStart="@dimen/margin_large"
+                    android:paddingEnd="@dimen/margin_large"
+                    android:textColor="@color/colorSecondary"
+                    android:textColorHint="@color/colorDivider"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/login_username_et"
+                    app:layout_constraintVertical_bias="0" />
+
+                <TextView
+                    android:id="@+id/forgot_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/forgot_password"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/colorDivider" />
+
+                <RelativeLayout
+                    android:id="@+id/progress_bar_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/progress_bar_layout_back"
+                    android:elevation="20dp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:padding="@dimen/margin_small"
+                    android:layout_gravity="center"
+                    android:visibility="gone">
+
+                    <ProgressBar
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:layout_marginTop="@dimen/margin_40dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:text="@string/sign_in"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:textColor="@color/colorSecondary"
+                        android:textSize="16sp" />
+
+                    <com.skydoves.elasticviews.ElasticImageView
+                        android:id="@+id/login_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/margin_large"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:layout_marginEnd="@dimen/margin_large"
+                        android:layout_marginBottom="@dimen/margin_large"
+                        android:padding="10dp"
+                        android:tint="@color/white"
+                        android:background="@drawable/button_background"
+                        android:src="@drawable/ic_baseline_arrow_forward_24"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/signUpTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:text="@string/don_t_have_an_account_sign_up"
+                android:textColor="@color/darkGray"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                app:layout_constraintVertical_bias="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/edit_job"
+        android:icon="@drawable/ic_outline_edit"
+        app:iconTint="@color/white"
+        android:title="@string/edit_job"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/delete_job"
+        android:icon="@drawable/ic_outline_delete"
+        app:iconTint="@color/white"
+        android:title="@string/delete_job"
+        app:showAsAction="ifRoom" />
+
+</menu>

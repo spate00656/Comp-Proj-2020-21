@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/admin_fitness_band_nav_graph"
+    app:startDestination="@id/showExerciseListFragment">
+
+        <fragment
+            android:id="@+id/showExerciseListFragment"
+            android:name="com.woa.addworkout.ShowExerciseListFragment"
+            android:label="Exercises"
+            tools:layout="@layout/fragment_show_exercise_list" >
+                <action
+                    android:id="@+id/action_showExerciseListFragment_to_addWorkoutPlanFragment2"
+                    app:destination="@id/addWorkoutPlanFragment2" />
+                <action
+                    android:id="@+id/action_showExerciseListFragment_to_showExerciseWorkoutListFragment"
+                    app:destination="@id/showExerciseWorkoutListFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/showExerciseWorkoutListFragment"
+            android:name="com.woa.addworkout.ShowExerciseWorkoutListFragment"
+            android:label="All Exercise"
+            tools:layout="@layout/fragment_show_exercise_workout_list" >
+                <argument
+                    android:name="exerciseName"
+                    app:argType="string" />
+                <action
+                    android:id="@+id/action_showExerciseWorkoutListFragment_to_addExerciseFragment4"
+                    app:destination="@id/addExerciseFragment4" />
+                <argument
+                    android:name="CheckType"
+                    app:argType="string" />
+        </fragment>
+        <fragment
+            android:id="@+id/addExerciseFragment4"
+            android:name="com.woa.addworkout.AddExerciseFragment"
+            android:label="Add Exercise"
+            tools:layout="@layout/fragment_add_exercise" >
+                <argument
+                    android:name="exerciseData"
+                    app:argType="com.woa.dataClasses.ExerciseList" />
+                <action
+                    android:id="@+id/action_addExerciseFragment4_to_showExerciseWorkoutListFragment"
+                    app:destination="@id/showExerciseWorkoutListFragment" />
+                <argument android:name="checkType"
+                    app:argType="string" />
+                <argument
+                    android:name="CategoryName"
+                    app:argType="string" />
+        </fragment>
+
+
+
+        <fragment
+            android:id="@+id/addWorkoutPlanFragment2"
+            android:name="com.woa.addworkout.AddWorkoutPlanFragment"
+            android:label="AddWorkoutPlanFragment"
+            tools:layout="@layout/fragment_add_workout_plan"
+            >
+                <action
+                    android:id="@+id/action_addWorkoutPlanFragment2_to_showExerciseWorkoutListFragment"
+                    app:destination="@id/showExerciseWorkoutListFragment" />
+                <action
+                    android:id="@+id/action_addWorkoutPlanFragment2_to_showExerciseListFragment"
+                    app:destination="@id/showExerciseListFragment" />
+        </fragment>
+</navigation>

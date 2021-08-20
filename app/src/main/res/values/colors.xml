@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="appColor">#AFFB75</color>
+    <color name="colorPrimary">#AFFB75</color>
+    <color name="colorSecondary">#20303F</color>
+    <color name="lightGreen">#5EBAA1</color>
+    <color name="greenDark">#63CBB0</color>
+<!--    <color name="lightGreen">#608830</color>-->
+    <color name="green">#135744</color>
+    <color name="colorPrimaryLight">#BBDEFB</color>
+    <color name="colorDivider">#9A9494</color>
+    <color name="colorlightBlack">#2C4257</color>
+    <color name="gray">#EEEEEE</color>
+    <color name="darkGray">#333333</color>
+    <color name="lightGray">#d3d3d3</color>
+    <color name="blue">#046af9</color>
+    <color name="blueDark">#0041c5</color>
+    <color name="blueLight">#6997ff</color>
+    <color name="red">#B20000</color>
+    <color name="yellow">#ffd600</color>
+    <color name="lightYellow">#fff176</color>
+    <color name="golden">#C3A71F</color>
+    <color name="targetColor">#FF8A65</color>
+    <color name="colorNew">#AFFB75</color>
+
+
+    <color name="parrotColor">#5C8B2A</color>
+    <color name="appGreen">#AFFB75</color>
+    <color name="bluesColor">#007CAF</color>
+    <color name="darkYellow">#B0B000</color>
+    <color name="darkPurple">#48166D</color>
+
+
+
+
+
+</resources>

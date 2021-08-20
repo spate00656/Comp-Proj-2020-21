@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:layout_marginStart="@dimen/_8sdp"
+    android:layout_marginEnd="@dimen/_8sdp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_toEndOf="@+id/reps_tv"
+            android:text="@string/weight_kgs"
+            android:padding="@dimen/_4sdp" />
+        <TextView
+            android:layout_toStartOf="@id/edit_button"
+            android:id="@+id/exercise_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_toEndOf="@id/weight"
+            android:textSize="16sp"
+            tools:ignore="RelativeOverlap" />
+        <TextView
+            android:id="@+id/reps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/reps"
+            android:padding="@dimen/_4sdp" />
+
+
+        <TextView
+            android:id="@+id/reps_tv"
+            android:layout_toEndOf="@+id/reps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_mini"
+            android:padding="@dimen/_4sdp" />
+
+
+
+
+        <ImageView
+            android:id="@+id/edit_button"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_toStartOf="@id/cancel_button"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/cancel"
+            app:srcCompat="@drawable/ic_outline_edit"
+            app:tint="@color/appGreen" />
+        <ImageView
+            android:id="@+id/cancel_button"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/cancel"
+            app:srcCompat="@drawable/ic_round_cancel"
+            app:tint="@color/red" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@color/gray" />
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/exercise__nav_graph"
+    app:startDestination="@id/exerciseListFragment">
+
+    <fragment
+        android:id="@+id/exerciseListFragment"
+        android:name="com.woa.ExerciseHistory.ExerciseListFragment"
+        android:label="fragment_exercise_list"
+        tools:layout="@layout/fragment_exercise_list" >
+        <action
+            android:id="@+id/action_exerciseListFragment_to_exerciseCategoryListFragment"
+            app:destination="@id/exerciseCategoryListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseCategoryListFragment"
+        android:name="com.woa.ExerciseHistory.ExerciseCategoryListFragment"
+        android:label="fragment_exercise_category_list"
+        tools:layout="@layout/fragment_exercise_category_list" >
+        <action
+            android:id="@+id/action_exerciseCategoryListFragment_to_exerciseListFragment"
+            app:destination="@id/exerciseListFragment" />
+
+        <argument
+            android:name="exerciseName"
+            app:argType="string" />
+        <argument
+            android:name="CheckType"
+            app:argType="string" />
+
+
+    </fragment>
+</navigation>

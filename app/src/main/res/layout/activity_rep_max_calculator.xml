@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/calculator_gradient"
+    tools:context=".RepMaxCalculator.RepMaxCalculatorActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_small"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:orientation="horizontal">
+
+
+            <com.skydoves.elasticviews.ElasticImageView
+                android:id="@+id/back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:backgroundTint="@color/white"
+                app:tint="@color/white"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/toolBarText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_large"
+        android:fontFamily="@font/poppins"
+        android:text="Rep Max \nCalculator"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/addWorkoutPlan"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/add_product_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_8sdp"
+            android:orientation="vertical"
+            android:padding="@dimen/_8sdp">
+
+
+            <LinearLayout
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_weight="1"
+                    android:id="@+id/exerciseInputLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:focusableInTouchMode="true"
+                    android:hint="@string/weight_kgs">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/weight_kgs_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:background="@drawable/button_background"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/repsInputLayout"
+                    android:layout_weight="1"
+                    android:visibility="visible"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:focusableInTouchMode="true"
+                    android:hint="@string/reps">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/reps_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:background="@drawable/button_background"
+                        android:backgroundTint="@color/white"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <com.skydoves.elasticviews.ElasticButton
+                    android:id="@+id/cal_button"
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@drawable/button_background"
+                    android:backgroundTint="@color/white"
+                    android:text="Calculate"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="18sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_large"
+                android:fillViewport="true">
+
+
+                <LinearLayout
+                    android:id="@+id/linearView"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:id="@+id/l1"
+                        android:layout_marginTop="@dimen/margin_mini"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white">
+                       <TextView
+                           android:layout_weight="1"
+                           android:gravity="center"
+                           android:layout_gravity="center"
+                           android:layout_width="match_parent"
+                           android:textColor="@color/black"
+                           android:fontFamily="@font/poppins"
+                           android:layout_height="wrap_content"
+                           android:text="1 RM"
+                           android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/c1"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="calculation"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/l2"
+                        android:layout_marginTop="@dimen/margin_mini"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white">
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2 RM"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/c2"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="calculation"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/l3"
+                        android:layout_marginTop="@dimen/margin_mini"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white">
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="3 RM"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/c3"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="calculation"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/l4"
+                        android:layout_marginTop="@dimen/margin_mini"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white">
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="4 RM"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/c4"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="calculation"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/l5"
+                        android:layout_marginTop="@dimen/margin_mini"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white">
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="5 RM"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/c5"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="calculation"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/l6"
+                        android:layout_marginTop="@dimen/margin_mini"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white">
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="6 RM"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/c6"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="calculation"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/l7"
+                        android:layout_marginTop="@dimen/margin_mini"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white">
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="7 RM"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/c7"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="calculation"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/l8"
+                        android:layout_marginTop="@dimen/margin_mini"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white">
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="8 RM"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/c8"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="calculation"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/l9"
+                        android:layout_marginTop="@dimen/margin_mini"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white">
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="9 RM"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/c9"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="calculation"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/l10"
+                        android:layout_marginTop="@dimen/margin_mini"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white">
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="10 RM"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/c10"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="calculation"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/l11"
+                        android:layout_marginTop="@dimen/margin_mini"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white">
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="11 RM"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/c11"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="calculation"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/l12"
+                        android:layout_marginTop="@dimen/margin_mini"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white">
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="12 RM"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/c12"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="calculation"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/l13"
+                        android:layout_marginTop="@dimen/margin_mini"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white">
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="13 RM"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/c13"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="calculation"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/l14"
+                        android:layout_marginTop="@dimen/margin_mini"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white">
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="14 RM"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/c14"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="calculation"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/l15"
+                        android:layout_marginTop="@dimen/margin_mini"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white">
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="15 RM"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/c15"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="calculation"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/l16"
+                        android:layout_marginTop="@dimen/margin_mini"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white">
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="16 RM"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/c16"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="calculation"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/l17"
+                        android:layout_marginTop="@dimen/margin_mini"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white">
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="17 RM"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/c17"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="calculation"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/l18"
+                        android:layout_marginTop="@dimen/margin_mini"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white">
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="18 RM"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/c18"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="calculation"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/l19"
+                        android:layout_marginTop="@dimen/margin_mini"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white">
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="19 RM"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/c19"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="calculation"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+
+                        android:id="@+id/l20"
+                        android:layout_marginTop="@dimen/margin_mini"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/white">
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="20 RM"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/c20"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="calculation"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+
+
+
+
+
+
+                </LinearLayout>
+
+
+
+            </ScrollView>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
