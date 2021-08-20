@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.woa">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher_foreground"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_foreground"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CityJobTrack"
+        tools:ignore="AllowBackup">
+        <activity
+            android:name=".CreateWorkout.activities.ai.ArtificialIntelligenceActivity"
+            android:theme="@style/AuthActivity.NoActionBar" />
+        <activity
+            android:name=".CreateWorkout.activities.manual.CreateManualWorkoutActivity"
+            android:theme="@style/AuthActivity.NoActionBar" />
+        <activity
+            android:name=".CreateWorkout.activities.manual.ManualWorkoutActivity"
+            android:theme="@style/AuthActivity.NoActionBar" />
+        <activity
+            android:name=".ExerciseHistory.ExerciseActivity"
+            android:theme="@style/AuthActivity.NoActionBar" />
+        <activity
+            android:name=".ExerciseHistory.ViewExerciseActivity"
+            android:theme="@style/AuthActivity.NoActionBar" />
+        <activity
+            android:name="com.woa.RepMaxCalculator.RepMaxCalculatorActivity"
+            android:theme="@style/AuthActivity.NoActionBar" />
+        <activity
+            android:name=".CreateWorkout.activities.option.CreateWorkoutOptionActivity"
+            android:theme="@style/AuthActivity.NoActionBar" />
+        <activity
+            android:name="com.woa.goals.GoalsActivity"
+            android:theme="@style/AuthActivity.NoActionBar" />
+        <activity android:name="com.woa.tutorial.TutorialFullVideoPlayerActivity" />
+        <activity android:name="com.woa.tutorial.TutorialWorkoutActivity" />
+        <activity
+            android:name="com.woa.home.fragments.profile.EditProfileActivity"
+            android:theme="@style/SplashTheme.NoActionBar" />
+        <activity
+            android:name="com.woa.addworkout.AddWorkoutActivity"
+            android:theme="@style/AuthActivity.NoActionBar" />
+        <activity
+            android:name="com.woa.auth.activity.AuthActivity"
+            android:theme="@style/AuthActivity.NoActionBar" />
+        <activity
+            android:name="com.woa.home.activity.HomeActivity"
+            android:theme="@style/AuthActivity.NoActionBar" />
+        <activity
+            android:name="com.woa.splash.SplashActivity"
+            android:theme="@style/SplashTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
+
+        <receiver android:name="com.woa.receiver.BookCalenderReceiver">
+
+            <!--
+                        <intent-filter>
+                            <action android:name="com.example.helloandroid.alarms" />
+                        </intent-filter>
+            -->
+        </receiver>
+    </application>
+
+</manifest>
